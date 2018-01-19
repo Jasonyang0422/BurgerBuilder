@@ -9,7 +9,8 @@ class Modal extends Component {
 	//if you don't limit this step
 	//the modal will re-render even if you just click the more ingredient
 	shouldComponentUpdate(nextProps, nextState) {
-		return nextProps.ifShow !== this.props.ifShow;
+		return nextProps.ifShow !== this.props.ifShow 
+			|| nextProps.children !== this.props.children;
 	}
 
 	componentWillUpdate () {
